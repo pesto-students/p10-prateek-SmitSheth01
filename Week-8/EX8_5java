@@ -1,0 +1,60 @@
+package Week_8;
+import java.util.*;
+public class Ex8_5 {
+
+	public static void nextGreaterElement(int[] arr1) {
+		int head = -1;
+		int tail = -1;
+		int n = arr1.length;
+		Queue<Integer> q = new LinkedList();
+		
+		for(int i = 0; i<arr1.length; i++) {
+			int next = arr1[i];
+			if(q.size() == 0) {
+				q.add(next);
+				System.out.println(q);
+			}
+			else  {
+				if(!q.isEmpty())
+				{
+					while(next>q.peek()) {
+						System.out.println(arr1[i]);
+						q.poll();
+						System.out.println(q);
+						if(q.isEmpty())
+							break;
+						
+					}
+					if(arr1[i]<q.peek()) {
+						q.offer(arr1[i]);
+						System.out.println(q);
+					}
+				}
+				
+			}
+			q.add(next);
+			if(i == arr1.length-1) {
+				System.out.println(-1);
+			}
+			
+		}
+				
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Number of elements: ");
+		int n = sc.nextInt();
+		System.out.println("Enter array elements: ");
+		int arr[] = new int[n];
+		for(int i = 0; i < n; i++) {
+			arr[i] = sc.nextInt();
+		}
+		nextGreaterElement(arr);
+		
+	}
+
+}
+
