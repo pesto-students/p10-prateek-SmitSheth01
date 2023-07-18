@@ -88,6 +88,7 @@
   color: white;
   background-color: var(--primary-color);
   border: none;
+
   cursor: pointer;
 }
 
@@ -219,4 +220,5 @@
   height: 98px;
   bottom: -98px;
   animation-delay: 6s;
+
 }
