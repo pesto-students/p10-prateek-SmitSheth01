@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Peer1 from './components/Peer1';
+import RoomComponent from './components/RoomComponent';
 
 function App() {
   return (
     <div className="App">
-      <Peer1 />
+      <RoomComponent />
     </div>
   );
 }
